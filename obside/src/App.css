@@ -1,38 +1,84 @@
+body {
+  font-family: 'nanumsquare';
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  /*
+  flex는 직계 자식에게만 영향을 준다
+  직계 자식은 flex item으로써 동작함
+
+  기존의 inline/ block 모델과는 다른 모델임
+  따라서 inline/block 속성은 영향을 주지 못함
+  flex와 관련된 속성만 영향을 받게됨
+  */
   flex-direction: column;
-  align-items: center;
+  /*flex의 자식 요소 세로 정렬*/
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /*가로축 정렬*/
+  align-items: center;
+  /*세로축 정렬*/
+
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+
+.header {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+
   color: white;
+  background-color: black;
+
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+
+.body {
+  display: flex;
+  flex-direction: row;
+
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 90%;
+  padding: 10px;
+
+  justify-content: space-between;
+
+  color: white;
+  background-color: grey;
+
+
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body div {
+  background-color: rgb(54, 52, 52);
+}
+
+.bdyContent {
+
+  width: 80%;
+
+  background-color: rgb(121, 143, 190) !important;
+}
+
+.footer {
+  box-sizing: border-box;
+
+
+  width: 100%;
+
+  text-align: center;
+
+
+  color: white;
+  background-color: rgb(90, 90, 90);
 }
